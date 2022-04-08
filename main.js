@@ -1,40 +1,34 @@
-let firstCard = 11;
-let secondCard = 9;
-let card = [firstCard, secondCard]
+/* Variables */
+let firstCard = 8;
+let secondCard = 1;
 let sum = firstCard + secondCard;
+let cards = [firstCard, secondCard];
+let randomCard = Math.floor((Math.random() * 10) + 1);
+let message = "";
 let hasBlackJack = false;
 let isAlive = true;
-let message = "";
 
-let messageEl = document.querySelector('#message-el')
-let sumEl = document.querySelector('#sum-el')
-let cardsEl = document.querySelector('#cards-el')
+/* HTML Elements */
+let messageEl = document.querySelector('#message-el');
+let cardsEl = document.querySelector('#cards-el');
+let sumEl = document.querySelector('#sum-el');
 
-function startGame() {
-    renderGame();
-}
+/* Functions */
+function startGame() {renderGame();}
+function newCard() {cardsEl.textContent = "Cards: " + randomCard;}
 
 function renderGame() {
-    sumEl.textContent = "Sum: " + sum;
-    cardsEl.textContent = "Cards: " + card[0] + ", " + card[1];
-    if (sum <= 20) {
-        message = "Do you want another card?";
-    }
-    else if (sum === 21) {
+    if (sum > 21) {
+        message = "You lost.";
+        
+    } else if (sum === 21) {
         message = "BlackJack!";
         hasBlackJack = true;
-    }
-    else {
-        message = "You\'ve lost.";
+    } else {
+        message = "Do you want another card?";
         isAlive = false;
     }
     messageEl.textContent = message;
+    cardsEl.textContent = "Cards: " + cards[0] + ", " + cards[1]
+    sumEl.textContent = "Sum: " + sum
 }
-
-function newCard() {
-    let newCard = 11
-    sum += newCard;
-    renderGame();
-    cardsEl.textContent = "Cards: " + card[0] + ", " + card[1] + ", " + card[i];
-}
-
