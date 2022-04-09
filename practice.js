@@ -53,3 +53,14 @@
 // if (likesDocumentaries || likesStartUps) {
 //     recommendMovie();
 // }
+
+// let airbnb = {
+//     listed: true,
+//     address: "123 Street",
+//     price: 123,
+//     images: ["images/castle.png"]
+// }
+
+// console.log(airbnb.address);
+// console.log(airbnb.images);
+

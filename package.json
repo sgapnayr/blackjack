@@ -1,0 +1,23 @@
+{
+  "name": "scrimba-blackjack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgapnayr/blackjack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgapnayr/blackjack/issues"
+  },
+  "homepage": "https://github.com/sgapnayr/blackjack#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.3.1"
+  }
+}

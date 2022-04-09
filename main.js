@@ -15,9 +15,10 @@ let sumEl = document.querySelector('#sum-el');
 /* Player */
 let player = {
     name: "Ryan",
-    chips: 145 }
+    chips: 145,
+}
 
-playerEl.textContent = player.name + ": " + "$" + player.chips;
+playerEl.textContent = player.name + ": $" + player.chips
 
 /* Functions */
 function getRandomCard() {
