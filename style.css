@@ -23,7 +23,7 @@
 }
 .body {
   width: 70%;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,9 @@ h1 {
   transform: translateY(-100%);
 }
 #message-el {
-  width: 50%;
+  width: 60%;
   display: flex;
+  align-content: center;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -68,6 +69,12 @@ h1 {
   position: absolute;
   transform: translateY(400%);
   font-weight: 500;
+}
+.new-card {
+  transform: translateY(475%);
+}
+#greeting-el {
+  transform: translateY(500%);
 }
 
 /* Button */
@@ -87,10 +94,23 @@ button {
 button:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
 }
-.new-card {
-  transform: translateY(475%);
+
+/* Player */
+#player-el {
+  transform: translateY(1150%);
+  opacity: 0.3;
+  font-weight: bold;
 }
 
-#greeting-el {
-  transform: translateY(500%);
+/* Media */
+@media screen and (max-width: 768px) {
+  #player-el {
+    opacity: 0;
+  }
+  #message-el {
+    width: 80%;
+  }
+  button {
+    transform: translateY(-200%);
+  }
 }

@@ -1,25 +1,52 @@
 
 /* Variables */
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard;
-let cards = [firstCard, secondCard];
+let sum = 0;
+let cards = [];
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
 /* HTML Elements */
 let messageEl = document.querySelector('#message-el');
+let playerEl = document.querySelector('#player-el')
 let cardsEl = document.querySelector('#cards-el');
 let sumEl = document.querySelector('#sum-el');
 
-/* Functions */
-function startGame() {renderGame();}
+/* Player */
+let player = {
+    name: "Ryan",
+    chips: 145 }
 
-function renderGame() {
-    for (let i = 0; i < cards.length; i++) {
-        cardsEl.textContent += " " + cards[i] + " ";
+playerEl.textContent = player.name + ": " + "$" + player.chips;
+
+/* Functions */
+function getRandomCard() {
+    let randomCard = Math.floor((Math.random() * 13) + 1);
+    if (randomCard > 10) {
+        cardsEl.textContent = 10
+        return 10;
+    } else if (randomCard === 1) {
+        return 11;
+    } else {
+        return randomCard;
     }
+}
+function startGame() {
+    isAlive = true;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard; 
+    renderGame();
+}
+function renderGame() {
+    cardsEl.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " ";
+    }
+
+    sumEl.textContent = "Sum: " + sum
     if (sum > 21) {
         message = "You lost.";
         
@@ -31,17 +58,13 @@ function renderGame() {
         isAlive = false;
     }
     messageEl.textContent = message;
-    sumEl.textContent = "Sum: " + sum
 }
-
 function newCard() {
-    let card = getRandomCard()
-    sum += card
-    cards.push(card);
-    renderGame();
+    if (sum < 21 && sum > 1) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()        
+    }
 }
 
-function getRandomCard() {
-    let randomCard = Math.floor((Math.random() * 12));
-    return randomCard;
-}

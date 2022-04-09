@@ -1,8 +1,4 @@
 
-// // for (let i = 10; i <= 100; i += 10) {
-// //     console.log(i);
-// // }
-
 // let sentence = ["Hello", "my", "name", "is", "Ryan"]
 // let greetingEl = document.getElementById('greeting-el')
 
@@ -11,8 +7,8 @@
 //     greetingEl.textContent += sentence[i] + " ";
 // }
 
-let player1Time = 110;
-let player2Time = 107;
+// let player1Time = 110;
+// let player2Time = 107;
 
 // function getFaststRaceTime() {
 //     if (player1Time < player2Time) {
@@ -28,10 +24,32 @@ let player2Time = 107;
 
 // console.log(fastestRace);
 
-function raceTime() {
-    return player1Time + player2Time;
-}
+// function raceTime() {
+//     return player1Time + player2Time;
+// }
 
-let newTime = raceTime()
+// let newTime = raceTime()
 
-console.log(newTime);
+// console.log(newTime);
+
+// let hasSolvedChallenge = false;
+// let hasHintsLeft = false;
+
+// function showSolution() {
+//     console.log("Showing the solution ...");
+// }
+
+// if (hasSolvedChallenge === false && hasHintsLeft === false) {
+//     showSolution()
+// }
+
+// let likesDocumentaries = true;
+// let likesStartUps = true;
+
+// function recommendMovie() {
+//     console.log("Hey check out this movie...")
+// }
+
+// if (likesDocumentaries || likesStartUps) {
+//     recommendMovie();
+// }
