@@ -49,6 +49,7 @@ h1 {
   color: var(--primary-color);
   position: absolute;
   transform: translateY(-100%);
+  margin-top: -1rem;
 }
 #message-el {
   width: 60%;
